@@ -1,6 +1,6 @@
 ARCH=gpt2
 OPT=D
-CONFIG=config/L6-H9.json
+CONFIG=config/L6-H6.json
 ALPHA=0.5
 
 mkdir cache
