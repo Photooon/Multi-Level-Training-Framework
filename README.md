@@ -16,19 +16,22 @@ pip install torch==2.0.1+cu118 transformers==4.31.0
 
 **Step 2**
 
-If you hope to run the pre-training acceleration example, please install following packages.
+If you hope to run the pre-training acceleration example, please install packages as follows.
 
 ```bash
-pip install datasets==2.14.6 evaluate==0.4.0
+cd example
+pip install -r requirements.txt
 ```
 
 ## Map Tools Usage
 
-Please refer to map_tools/README.md .
+We implemented the three operators to ochestrate the multi-level training framework in map_tools. With map tools, it's convenient to resize and merge transformers. The usage of map tools could be found in [map_tools document](map_tools/README.md).
 
 ## Accelerate Pre-training of GPT-2 on Wikipedia-En
 
-wait for implementation...
+To better illustrate the usage of map tools and demonstrate the effectiveness of the multi-level training framework, we provide a example of accelerating the GPT-2 pre-training on Wikipedia-En. Our framework could save around 23.5% training time for it in our testing environment of 8 * NVIDIA A100 (Note that the speedup ratio depends on datasets, models and machines.).
+
+If you hope to run the example, 150GB space of disk is required to preprocess the wikipedia dataset. Additionally, around 1.5 days is needed to run through the example with 8 * NVIDIA A100. 
 
 ## Citation
 
